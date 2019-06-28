@@ -1,5 +1,6 @@
 package com.cxh.smart.future.io;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.cxh.smart.city.select.ArerSelectActivity;
 import com.cxh.smart_refreshview.SmartRefreshView;
 import com.cxh.smart_refreshview.SwipyRefreshLayoutDirection;
 
@@ -71,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(MyHolder holder, int position) {
             holder.text.setText(datas.get(position));
+            holder.text.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(MainActivity.this,ArerSelectActivity.class));
+                }
+            });
         }
 
         @Override

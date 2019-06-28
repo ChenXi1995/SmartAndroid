@@ -1,1 +1,1 @@
-include ':app', ':smartrefreshview'
+include ':app', ':smartrefreshview', ':smartcityselect'

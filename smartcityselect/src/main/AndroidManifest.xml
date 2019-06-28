@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cxh.smart.city.select">
+    <application>
+        <activity android:name="com.cxh.smart.city.select.ArerSelectActivity"/>
+    </application>
+</manifest>
