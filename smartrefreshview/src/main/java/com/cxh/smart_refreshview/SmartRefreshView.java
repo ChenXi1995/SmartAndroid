@@ -36,7 +36,10 @@ import android.view.animation.Transformation;
 import android.widget.AbsListView;
 
 
-public class SwipyRefreshLayout extends ViewGroup {
+/**
+ * 643200732
+ * */
+public class SmartRefreshView extends ViewGroup {
 
     public static final String TAG = "SwipyRefreshLayout";
 
@@ -48,7 +51,7 @@ public class SwipyRefreshLayout extends ViewGroup {
     // Maps to ProgressBar default style
     public static final int DEFAULT = MaterialProgressDrawable.DEFAULT;
 
-    private static final String LOG_TAG = SwipyRefreshLayout.class.getSimpleName();
+    private static final String LOG_TAG = SmartRefreshView.class.getSimpleName();
 
     private static final int MAX_ALPHA = 255;
     private static final int STARTING_PROGRESS_ALPHA = (int) (.3f * MAX_ALPHA);
@@ -246,7 +249,7 @@ public class SwipyRefreshLayout extends ViewGroup {
      *
      * @param context
      */
-    public SwipyRefreshLayout(Context context) {
+    public SmartRefreshView(Context context) {
         this(context, null);
     }
 
@@ -256,7 +259,7 @@ public class SwipyRefreshLayout extends ViewGroup {
      * @param context
      * @param attrs
      */
-    public SwipyRefreshLayout(Context context, AttributeSet attrs) {
+    public SmartRefreshView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
@@ -271,9 +274,9 @@ public class SwipyRefreshLayout extends ViewGroup {
         setEnabled(a.getBoolean(0, true));
         a.recycle();
 
-        final TypedArray a2 = context.obtainStyledAttributes(attrs, R.styleable.SwipyRefreshLayout);
+        final TypedArray a2 = context.obtainStyledAttributes(attrs, R.styleable.SmartRefreshView);
         SwipyRefreshLayoutDirection direction
-                = SwipyRefreshLayoutDirection.getFromInt(a2.getInt(R.styleable.SwipyRefreshLayout_srl_direction, 0));
+                = SwipyRefreshLayoutDirection.getFromInt(a2.getInt(R.styleable.SmartRefreshView_srl_direction, 0));
         if (direction != SwipyRefreshLayoutDirection.BOTH) {
             mDirection = direction;
             mBothDirection = false;

@@ -28,7 +28,7 @@
 
     </declare-styleable>
 
-    <declare-styleable name="SwipyRefreshLayout">
+    <declare-styleable name="SmartRefreshView">
         <attr name="srl_direction">
             <enum name="top" value="0" />
             <enum name="bottom" value="1" />
