@@ -1,7 +1,7 @@
 package com.cxh.smart_refreshview;
 
 /**
- * Created by oliviergoutay on 1/23/15.
+ * Created by 643200732
  */
 public enum SwipyRefreshLayoutDirection {
 

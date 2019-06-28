@@ -6,7 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.cxh.smart_refreshview.SmartRefreshView
+        app:srl_direction="both"
+        android:id="@+id/smart_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-
+        </android.support.v7.widget.RecyclerView>
+    </com.cxh.smart_refreshview.SmartRefreshView>
 </android.support.constraint.ConstraintLayout>

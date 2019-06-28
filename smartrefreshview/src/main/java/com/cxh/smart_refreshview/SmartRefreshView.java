@@ -41,7 +41,7 @@ import android.widget.AbsListView;
  * */
 public class SmartRefreshView extends ViewGroup {
 
-    public static final String TAG = "SwipyRefreshLayout";
+    public static final String TAG = "SmartRefreshView";
 
     private static final float MAX_SWIPE_DISTANCE_FACTOR = .6f;
     private static final int REFRESH_TRIGGER_DISTANCE = 120;
