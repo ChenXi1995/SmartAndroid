@@ -277,6 +277,7 @@ public class SmartRefreshView extends ViewGroup {
         final TypedArray a2 = context.obtainStyledAttributes(attrs, R.styleable.SmartRefreshView);
         SwipyRefreshLayoutDirection direction
                 = SwipyRefreshLayoutDirection.getFromInt(a2.getInt(R.styleable.SmartRefreshView_srl_direction, 0));
+        int resourceId = a2.getResourceId(R.styleable.SmartRefreshView_refresh_icon,R.drawable.refresh_icon);
         if (direction != SwipyRefreshLayoutDirection.BOTH) {
             mDirection = direction;
             mBothDirection = false;
@@ -284,13 +285,16 @@ public class SmartRefreshView extends ViewGroup {
             mDirection = SwipyRefreshLayoutDirection.TOP;
             mBothDirection = true;
         }
+
+
         a2.recycle();
 
         final DisplayMetrics metrics = getResources().getDisplayMetrics();
         mCircleWidth = (int) (CIRCLE_DIAMETER * metrics.density);
         mCircleHeight = (int) (CIRCLE_DIAMETER * metrics.density);
 
-        createProgressView();
+
+        createProgressView(resourceId);
         ViewCompat.setChildrenDrawingOrderEnabled(this, true);
         // the absolute offset has to take into account that the circle starts at an offset
         mSpinnerFinalOffset = DEFAULT_CIRCLE_TARGET * metrics.density;
@@ -311,9 +315,9 @@ public class SmartRefreshView extends ViewGroup {
         }
     }
 
-    private void createProgressView() {
+    private void createProgressView(int resourceId) {
         mCircleView = new CircleImageView(getContext(), CIRCLE_BG_LIGHT, CIRCLE_DIAMETER / 2);
-        mProgress = new MaterialProgressDrawable(getContext(), this);
+        mProgress = new MaterialProgressDrawable(getContext(), this,resourceId);
         mProgress.setBackgroundColor(CIRCLE_BG_LIGHT);
         mCircleView.setImageDrawable(mProgress);
         mCircleView.setVisibility(View.GONE);

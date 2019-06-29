@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <com.cxh.smart_refreshview.SmartRefreshView
+        app:refresh_icon="@mipmap/ic_launcher_round"
         app:srl_direction="both"
         android:id="@+id/smart_refresh"
         android:layout_width="match_parent"

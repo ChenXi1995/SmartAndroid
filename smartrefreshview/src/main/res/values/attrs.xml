@@ -33,7 +33,10 @@
             <enum name="top" value="0" />
             <enum name="bottom" value="1" />
             <enum name="both" value="2" />
+
         </attr>
+
+        <attr name="refresh_icon" format="reference" />
     </declare-styleable>
 
 </resources>

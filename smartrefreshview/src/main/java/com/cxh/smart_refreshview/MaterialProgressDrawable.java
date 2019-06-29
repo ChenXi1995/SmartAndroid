@@ -111,10 +111,10 @@ class MaterialProgressDrawable extends Drawable implements Animatable {
     private double mHeight;
     private Animation mFinishAnimation;
     public static Bitmap mBitmap;
-    public MaterialProgressDrawable(Context context, View parent) {
+    public MaterialProgressDrawable(Context context, View parent,int resourceId) {
         mParent = parent;
         mResources = context.getResources();
-        mBitmap = BitmapFactory.decodeResource(mResources, R.drawable.refresh_icon);
+        mBitmap = BitmapFactory.decodeResource(mResources, resourceId);
         mRing = new Ring(mCallback);
         mRing.setColors(COLORS);
 

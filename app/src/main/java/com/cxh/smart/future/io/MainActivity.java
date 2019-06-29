@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             holder.text.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(MainActivity.this,ArerSelectActivity.class));
+                    startActivityForResult(new Intent(MainActivity.this,ArerSelectActivity.class),0x66);
                 }
             });
         }
